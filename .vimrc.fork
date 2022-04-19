@@ -215,11 +215,11 @@ let g:snipMate = { 'snippet_version' : 1 }
         nnoremap mm dd
         nnoremap M D
     " }
-    
+
     " AutoPairs {
         imap <C-g>p <M-p>"
     " }
-    
+
      " Coc-snippets {
         " Use <C-l> for trigger snippet expand.
         imap <C-l> <Plug>(coc-snippets-expand)

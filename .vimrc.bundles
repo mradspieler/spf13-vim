@@ -142,12 +142,12 @@ call plug#begin('~/.vim/bundle')
         if count(g:spf13_bundle_groups, 'coc')
             Plug 'neoclide/coc.nvim', {'branch': 'release'}
             Plug 'honza/vim-snippets'
-            Plug 'SirVer/ultisnips'
-            Plug 'garbas/vim-snipmate'
+            " Plug 'SirVer/ultisnips'
+            " Plug 'garbas/vim-snipmate'
             " Source support_function.vim to support vim-snippets.
-            if filereadable(expand("~/.vim/bundle/vim-snippets/snippets/support_functions.vim"))
-                source ~/.vim/bundle/vim-snippets/snippets/support_functions.vim
-            endif
+            "if filereadable(expand("~/.vim/bundle/vim-snippets/snippets/support_functions.vim"))
+            "    source ~/.vim/bundle/vim-snippets/snippets/support_functions.vim
+            "endif
         endif
     " }
 
@@ -214,5 +214,4 @@ call plug#begin('~/.vim/bundle')
         source ~/.vimrc.bundles.local
     endif
 " }
-
 call plug#end()
