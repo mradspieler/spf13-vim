@@ -1,0 +1,47 @@
+" Plugins {
+    " Indentline {
+        let g:indentLine_setColors = 1
+    " }
+
+    " Vim move {
+        let g:move_key_modifier = 'C'
+    " }
+
+
+    " Markdown {
+        let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'bash=sh']
+        let g:markdown_syntax_conceal = 0
+    " }
+
+    " Editorconfig {
+        let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*', 'fzf://.*']
+        let g:EditorConfig_max_line_indicator = 'line'
+    " }
+
+    " PyMode {
+        let g:pymode_lint_checkers = ['flake8']
+        let g:pymode_syntax = 1
+        let g:pymode_syntax_all = 1
+        let g:pymode_lint_on_write = 0
+    " }
+
+    " Javascript tweaks {
+        let g:javascript_plugin_flow = 1
+    " }
+
+    " NERDTree & WebDevIcons {
+        let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+        let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+        let g:DevIconsEnableFoldersOpenClose = 1
+        let g:DevIconsEnableFolderExtensionPatternMatching = 1
+    " }
+
+    " ALE {
+        " Set this. Airline will handle the rest.
+        let g:airline#extensions#ale#enabled = 1
+
+        " Check lint only when file is saved
+        let g:ale_lint_on_text_changed = 'never'
+        let g:ale_lint_on_insert_leave = 0
+    " }
+" }
