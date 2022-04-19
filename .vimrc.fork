@@ -44,9 +44,9 @@
         let g:ale_lint_on_text_changed = 'never'
         let g:ale_lint_on_insert_leave = 0
     " }
-    
+
     " Coc {
-        Give more space for displaying messages.
+        " Give more space for displaying messages.
         set cmdheight=2
 
         " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
