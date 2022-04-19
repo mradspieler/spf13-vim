@@ -14,7 +14,6 @@
 "   You can find the original soure at http://spf13.com 
 " }
 
-
 " Development tools {
     Plug 'editorconfig/editorconfig-vim'
 " }
@@ -22,7 +21,7 @@
 " Editor Enhance {
     Plug 'kshenoy/vim-signature'
     Plug 'dominickng/fzf-session.vim'
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 " }
 
