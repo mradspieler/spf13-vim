@@ -140,7 +140,7 @@ call plug#begin('~/.vim/bundle')
 
     " Snippets & AutoComplete {
         if count(g:spf13_bundle_groups, 'coc')
-            Plug 'neoclide/coc.nvim', {'branch': 'release'}
+            Plug 'neoclide/coc.nvim', {'commit': '8219e19b', 'do': 'yarn install --frozen-lockfile'}
             Plug 'honza/vim-snippets'
             " Plug 'SirVer/ultisnips'
             " Plug 'garbas/vim-snipmate'
