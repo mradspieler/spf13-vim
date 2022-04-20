@@ -23,7 +23,6 @@ Lastly (and perhaps, most importantly) It is completely cross platform. It works
 
 # Installation
 ## Requirements
-To make all the plugins work, specifically [neocomplete](https://github.com/Shougo/neocomplete.vim), you need [vim with lua](https://github.com/Shougo/neocomplete.vim#requirements).
 
 ## Linux, \*nix, Mac OSX Installation
 
@@ -32,13 +31,11 @@ The easiest way to install spf13-vim is to use our [automatic installer](https:/
 *Requires Git 1.7+ and Vim 7.3+*
 
 ```bash
-
     curl https://tinyurl.com/2p8x54ve -L > spf13-vim.sh && sh spf13-vim.sh
 ```
 
 If you have a bash-compatible shell you can run the script directly:
 ```bash
-
     sh <(https://tinyurl.com/2p8x54ve)
 ```
 
@@ -171,27 +168,25 @@ To add a new bundle, just add one line for each bundle you want to install. The 
 Once new plugins are added, they have to be installed.
 
 ```bash
-    vim +BundleInstall! +BundleClean +q
+    vim +PlugInstall! +PlugClean +q
 ```
 
 ## Removing (disabling) an included plugin
 
 Create `~/.vimrc.local` if it doesn't already exist.
 
-Add the UnBundle command to this line. It takes the same input as the Bundle line, so simply copy the line you want to disable and add 'Un' to the beginning.
+Add the UnPlug command to this line. It takes the same input as the Bundle line, so simply copy the line you want to disable and add 'Un' to the beginning.
 
 For example, disabling the 'AutoClose' and 'scrooloose/syntastic' plugins
 
 ```bash
-    echo UnBundle \'AutoClose\' >> ~/.vimrc.bundles.local
-    echo UnBundle \'scrooloose/syntastic\' >> ~/.vimrc.bundles.local
+    echo UnPlug \'AutoClose\' >> ~/.vimrc.bundles.local
+    echo UnPlug \'scrooloose/syntastic\' >> ~/.vimrc.bundles.local
 ```
 
-**Remember to run ':BundleClean!' after this to remove the existing directories**
-
+**Remember to run ':PlugClean!' after this to remove the existing directories**
 
 Here are a few of the plugins:
-
 
 ## [Undotree]
 
@@ -218,10 +213,7 @@ functionality to your vim editing.  You can learn more about it with
 * Hide clutter ('\.pyc', '\.git', '\.hg', '\.svn', '\.bzr')
 * Treat NERDTree more like a panel than a split.
 
-## [ctrlp]
-Ctrlp replaces the Command-T plugin with a 100% viml plugin. It provides an intuitive and fast mechanism to load files from the file system (with regex and fuzzy find), from open buffers, and from recently used files.
-
-**QuickStart** Launch using `<c-p>`.
+## [Fzf]
 
 ## [Surround]
 
@@ -252,44 +244,11 @@ filetype. View `help :NERDCommenter` or checkout my post on [NERDCommenter](http
 
 **QuickStart** Toggle comments using `<Leader>c<space>` in Visual or Normal mode.
 
-## [neocomplete]
+## [coc-snippets]
 
-Neocomplete is an amazing autocomplete plugin with additional support for snippets. It can complete simulatiously from the dictionary, buffer, omnicomplete and snippets. This is the one true plugin that brings Vim autocomplete on par with the best editors.
+## [Coc]
 
-**QuickStart** Just start typing, it will autocomplete where possible
-
-**Customizations**:
-
- * Automatically present the autocomplete menu
- * Support tab and enter for autocomplete
- * `<C-k>` for completing snippets using [Neosnippet](https://github.com/Shougo/neosnippet.vim).
-
-![neocomplete image][autocomplete-img]
-
-## [YouCompleteMe]
-
-YouCompleteMe is another amazing completion engine. It is slightly more involved to set up as it contains a binary component that the user needs to compile before it will work. As a result of this however it is very fast.
-
-To enable YouCompleteMe add `youcompleteme` to your list of groups by overriding it in your `.vimrc.before.local` like so: `let g:spf13_bundle_groups=['general', 'programming', 'misc', 'scala', 'youcompleteme']` This is just an example. Remember to choose the other groups you want here.
-
-Once you have done this you will need to get Vundle to grab the latest code from git. You can do this by calling `:BundleInstall!`. You should see YouCompleteMe in the list.
-
-You will now have the code in your bundles directory and can proceed to compile the core. Change to the directory it has been downloaded to. If you have a vanilla install then `cd ~/.spf13-vim-3/.vim/bundle/YouCompleteMe/` should do the trick. You should see a file in this directory called install.sh. There are a few options to consider before running the installer:
-
-  * Do you want clang support (if you don't know what this is then you likely don't need it)?
-    * Do you want to link against a local libclang or have the installer download the latest for you?
-  * Do you want support for c# via the omnisharp server?
-
-The plugin is well documented on the site linked above. Be sure to give that a read and make sure you understand the options you require.
-
-For java users wanting to use eclim be sure to add `let g:EclimCompletionMethod = 'omnifunc'` to your .vimrc.local.
-
-## [Syntastic]
-
-Syntastic is a syntax checking plugin that runs buffers through external syntax
-checkers as they are saved and opened. If syntax errors are detected, the user
-is notified and is happy because they didn't have to compile their code or
-execute their script to find them.
+## [ALE]
 
 ## [AutoClose]
 
@@ -324,26 +283,7 @@ file
 
 ![fugitive image][fugitive-img]
 
-## [PIV]
-
-The most feature complete and up to date PHP Integration for Vim with proper support for PHP 5.3+ including latest syntax, functions, better fold support, etc.
-
-PIV provides:
-
- * PHP 5.3 support
- * Auto generation of PHP Doc (,pd on (function, variable, class) definition line)
- * Autocomplete of classes, functions, variables, constants and language keywords
- * Better indenting
- * Full PHP documentation manual (hit K on any function for full docs)
-
-![php vim itegration image][phpmanual-img]
-
-## [Ack.vim]
-
-Ack.vim uses ack to search inside the current directory for a pattern.
-You can learn more about it with `:help Ack`
-
-**QuickStart** :Ack
+## [Fzf rg]
 
 ## [Tabularize]
 
@@ -463,27 +403,20 @@ Here's some tips if you've never used VIM before:
 [Git]:http://git-scm.com
 [Curl]:http://curl.haxx.se
 [Vim]:http://www.vim.org/download.php#pc
-[msysgit]:http://msysgit.github.io
-[Chocolatey]: http://chocolatey.org/
-[spf13-vim package]: https://chocolatey.org/packages/spf13-vim
 [MacVim]:http://code.google.com/p/macvim/
 [spf13-vim]:https://github.com/spf13/spf13-vim
 [contributors]:https://github.com/spf13/spf13-vim/contributors
 
 [Vundle]:https://github.com/gmarik/vundle
-[PIV]:https://github.com/spf13/PIV
 [NERDCommenter]:https://github.com/scrooloose/nerdcommenter
 [Undotree]:https://github.com/mbbill/undotree
 [NERDTree]:https://github.com/scrooloose/nerdtree
-[ctrlp]:https://github.com/kien/ctrlp.vim
 [solarized]:https://github.com/altercation/vim-colors-solarized
 [neocomplete]:https://github.com/shougo/neocomplete
 [Fugitive]:https://github.com/tpope/vim-fugitive
 [Surround]:https://github.com/tpope/vim-surround
 [Tagbar]:https://github.com/majutsushi/tagbar
-[Syntastic]:https://github.com/scrooloose/syntastic
 [vim-easymotion]:https://github.com/Lokaltog/vim-easymotion
-[YouCompleteMe]:https://github.com/Valloric/YouCompleteMe
 [Matchit]:http://www.vim.org/scripts/script.php?script_id=39
 [Tabularize]:https://github.com/godlygeek/tabular
 [EasyMotion]:https://github.com/Lokaltog/vim-easymotion
@@ -491,7 +424,6 @@ Here's some tips if you've never used VIM before:
 [Powerline]:https://github.com/lokaltog/powerline
 [Powerline Fonts]:https://github.com/Lokaltog/powerline-fonts
 [AutoClose]:https://github.com/spf13/vim-autoclose
-[Ack.vim]:https://github.com/mileszs/ack.vim
 
 [spf13-vim-img]:https://i.imgur.com/UKToY.png
 [spf13-vimrc-img]:https://i.imgur.com/kZWj1.png
@@ -499,6 +431,5 @@ Here's some tips if you've never used VIM before:
 [tagbar-img]:https://i.imgur.com/cjbrC.png
 [fugitive-img]:https://i.imgur.com/4NrxV.png
 [nerdtree-img]:https://i.imgur.com/9xIfu.png
-[phpmanual-img]:https://i.imgur.com/c0GGP.png
 [easymotion-img]:https://i.imgur.com/ZsrVL.png
 [airline-img]:https://i.imgur.com/D4ZYADr.png
