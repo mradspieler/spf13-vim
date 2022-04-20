@@ -159,10 +159,10 @@ spf13-vim contains a curated set of popular vim plugins, colors, snippets and sy
 
 Create `~/.vimrc.bundles.local` for any additional bundles.
 
-To add a new bundle, just add one line for each bundle you want to install. The line should start with the word "Bundle" followed by a string of either the vim.org project name or the githubusername/githubprojectname. For example, the github project [spf13/vim-colors](https://github.com/spf13/vim-colors) can be added with the following command
+To add a new plugin, just add one line for each plugin you want to install. The line should start with the word "Plug" followed by a string of either the vim.org project name or the githubusername/githubprojectname. For example, the github project [spf13/vim-colors](https://github.com/spf13/vim-colors) can be added with the following command
 
 ```bash
-    echo Bundle \'spf13/vim-colors\' >> ~/.vimrc.bundles.local
+    echo Plug \'spf13/vim-colors\' >> ~/.vimrc.bundles.local
 ```
 
 Once new plugins are added, they have to be installed.
@@ -175,7 +175,7 @@ Once new plugins are added, they have to be installed.
 
 Create `~/.vimrc.local` if it doesn't already exist.
 
-Add the UnPlug command to this line. It takes the same input as the Bundle line, so simply copy the line you want to disable and add 'Un' to the beginning.
+Add the UnPlug command to this line. It takes the same input as the Plug line, so simply copy the line you want to disable and add 'Un' to the beginning.
 
 For example, disabling the 'AutoClose' and 'scrooloose/syntastic' plugins
 
