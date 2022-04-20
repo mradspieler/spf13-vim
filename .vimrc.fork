@@ -199,15 +199,13 @@
         autocmd FileType go nmap gtj :CocCommand go.tags.add json<cr>
     " }
 
+    " yoink {
+        let g:yoinkIncludeDeleteOperations=1
+    " }
 
-" s for substitute
-nmap s <plug>(SubversiveSubstitute)
-nmap ss <plug>(SubversiveSubstituteLine)
-nmap S <plug>(SubversiveSubstituteToEndOfLine)
-
-let g:yoinkIncludeDeleteOperations=1
-let g:snipMate = { 'snippet_version' : 1 }
-
+    " SnipMate {
+        let g:snipMate = { 'snippet_version' : 1 }
+    " }
 
     " Cutlass {
         nnoremap m d
@@ -251,4 +249,9 @@ let g:snipMate = { 'snippet_version' : 1 }
 
         " let g:coc_snippet_next = '<tab>'
     " }
+
+    " s for substitute
+    nmap s <plug>(SubversiveSubstitute)
+    nmap ss <plug>(SubversiveSubstituteLine)
+    nmap S <plug>(SubversiveSubstituteToEndOfLine)
 " }
