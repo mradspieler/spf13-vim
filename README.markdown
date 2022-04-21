@@ -1,4 +1,4 @@
-# spf13-vim : Steve Francia's Vim Distribution
+# spf13-vim : My fork of Steve Francia's Vim Distribution
 
                     __ _ _____              _
          ___ _ __  / _/ |___ /      __   __(_)_ __ ___
@@ -15,11 +15,11 @@ The distribution is completely customisable using a `~/.vimrc.local`, `~/.vimrc.
 
 ![spf13-vim image][spf13-vim-img]
 
-Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, spf13-vim 3 uses the [Vundle] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vundle also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
+Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, spf13-vim 3 uses the [Plug] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vim-plug also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
 
 Great care has been taken to ensure that each plugin plays nicely with others, and optional configuration has been provided for what we believe is the most efficient use.
 
-Lastly (and perhaps, most importantly) It is completely cross platform. It works well on Windows, Linux and OSX without any modifications or additional configurations. If you are using [MacVim] or Gvim additional features are enabled. So regardless of your environment just clone and run.
+It works well on Linux and OSX without any modifications or additional configurations. If you are using [MacVim] or Gvim additional features are enabled. So regardless of your environment just clone and run.
 
 # Installation
 ## Requirements
@@ -159,10 +159,10 @@ spf13-vim contains a curated set of popular vim plugins, colors, snippets and sy
 
 Create `~/.vimrc.bundles.local` for any additional bundles.
 
-To add a new bundle, just add one line for each bundle you want to install. The line should start with the word "Bundle" followed by a string of either the vim.org project name or the githubusername/githubprojectname. For example, the github project [spf13/vim-colors](https://github.com/spf13/vim-colors) can be added with the following command
+To add a new plugin, just add one line for each plugin you want to install. The line should start with the word "Plug" followed by a string of either the vim.org project name or the githubusername/githubprojectname. For example, the github project [spf13/vim-colors](https://github.com/spf13/vim-colors) can be added with the following command
 
 ```bash
-    echo Bundle \'spf13/vim-colors\' >> ~/.vimrc.bundles.local
+    echo Plug \'spf13/vim-colors\' >> ~/.vimrc.bundles.local
 ```
 
 Once new plugins are added, they have to be installed.
@@ -175,7 +175,7 @@ Once new plugins are added, they have to be installed.
 
 Create `~/.vimrc.local` if it doesn't already exist.
 
-Add the UnPlug command to this line. It takes the same input as the Bundle line, so simply copy the line you want to disable and add 'Un' to the beginning.
+Add the UnPlug command to this line. It takes the same input as the Plug line, so simply copy the line you want to disable and add 'Un' to the beginning.
 
 For example, disabling the 'AutoClose' and 'scrooloose/syntastic' plugins
 
@@ -407,7 +407,7 @@ Here's some tips if you've never used VIM before:
 [spf13-vim]:https://github.com/spf13/spf13-vim
 [contributors]:https://github.com/spf13/spf13-vim/contributors
 
-[Vundle]:https://github.com/gmarik/vundle
+[Plug]:https://github.com/junegunn/vim-plug
 [NERDCommenter]:https://github.com/scrooloose/nerdcommenter
 [Undotree]:https://github.com/mbbill/undotree
 [NERDTree]:https://github.com/scrooloose/nerdtree
