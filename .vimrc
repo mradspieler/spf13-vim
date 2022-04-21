@@ -679,11 +679,6 @@
             nnoremap <silent> <leader>fch :FzfHistory:<CR>
             " Search history
             nnoremap <silent> <leader>fsh :FzfHistory/<CR>
-
-            " ag search result (ALT-A to select all, ALT-D to deselect all)
-            if executable('ag')
-                nnoremap <silent> <leader>fag :FzfAg<CR>
-            endif
         endif
     "}
 
