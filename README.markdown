@@ -217,16 +217,15 @@ functionality to your vim editing.  You can learn more about it with
 
 fzf in itself is not a Vim plugin, and the official repository only provides the basic wrapper function for Vim and it's up to the users to write their own Vim commands with it. However, I've learned that many users of fzf are not familiar with Vimscript and are looking for the "default" implementation of the features they can find in the alternative Vim plugins.
 
-`<leader>ff` :FzfFiles
-`<leader>fg` :FzfGFiles
-`<leader>fg?` :FzfGFiles?
-`<leader>fb` :FzfBuffers
-`<leader>fl` :FzfLines
-`<leader>fbl` :FzfBLines
-`<leader>fru` :FzfHistory
-`<leader>fsh` :FzfHistory/
-`<leader>rg` :FzfRg
-
+* `<leader>ff`     :FzfFiles
+* `<leader>fg`     :FzfGFiles
+* `<leader>fg?`    :FzfGFiles?
+* `<leader>fb`     :FzfBuffers
+* `<leader>fl`     :FzfLines
+* `<leader>fbl`    :FzfBLines
+* `<leader>fru`    :FzfHistory
+* `<leader>fsh`    :FzfHistory/
+* `<leader>rg`     :FzfRg
 
 **QuickStart** Launch using `<Leader>ff` or `<Leader>rg`.
 
