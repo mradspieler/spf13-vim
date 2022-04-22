@@ -291,7 +291,7 @@ way of double curlies for things like jinja and twig.
 Fugitive adds pervasive git support to git directories in vim. For more
 information, use `:help fugitive`
 
-Use `:Gstatus` to view `git status` and type `-` on any file to stage or
+Use `:Git status` to view `git status` and type `-` on any file to stage or
 unstage it. Type `p` on a file to enter `git add -p` and stage specific
 hunks in the file.
 
@@ -302,18 +302,16 @@ file
 
 **Customizations**:
 
- * `<leader>gs` :Gstatus<CR>
+ * `<leader>gs` :Git status<CR>
  * `<leader>gd` :Gdiff<CR>
  * `<leader>gc` :Gcommit<CR>
  * `<leader>gb` :Gblame<CR>
- * `<leader>gl` :Glog<CR>
+ * `<leader>gl` :Gclog<CR>
  * `<leader>gp` :Git push<CR>
  * `<leader>gw` :Gwrite<CR>
  * :Git ___ will pass anything along to git.
 
 ![fugitive image][fugitive-img]
-
-## [Fzf rg]
 
 ## [Tabularize]
 
@@ -429,7 +427,6 @@ Here's some tips if you've never used VIM before:
 [![Analytics](https://ga-beacon.appspot.com/UA-7131036-5/spf13-vim/readme)](https://github.com/igrigorik/ga-beacon)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/spf13/spf13-vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-
 [Git]:http://git-scm.com
 [Curl]:http://curl.haxx.se
 [Vim]:http://www.vim.org/download.php#pc
@@ -441,9 +438,9 @@ Here's some tips if you've never used VIM before:
 [NERDCommenter]:https://github.com/scrooloose/nerdcommenter
 [Undotree]:https://github.com/mbbill/undotree
 [NERDTree]:https://github.com/scrooloose/nerdtree
-[Fzf] :https://github.com/junegunn/fzf.vim
-[Coc] :https://github.com/neoclide/coc.nvim
-[coc-snippets] :https://github.com/neoclide/coc-snippets
+[Fzf]:https://github.com/junegunn/fzf.vim
+[Coc]:https://github.com/neoclide/coc.nvim
+[coc-snippets]:https://github.com/neoclide/coc-snippets
 [solarized]:https://github.com/altercation/vim-colors-solarized
 [neocomplete]:https://github.com/shougo/neocomplete
 [Fugitive]:https://github.com/tpope/vim-fugitive
