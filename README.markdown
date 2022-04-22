@@ -215,6 +215,16 @@ functionality to your vim editing.  You can learn more about it with
 
 ## [Fzf]
 
+<leader>ff :FzfFiles<CR>
+<leader>fg :FzfGFiles<CR>
+<leader>fg? :FzfGFiles?<CR>
+<leader>fb :FzfBuffers<CR>
+<leader>fl :FzfLines<CR>
+<leader>fbl :FzfBLines<CR>
+<leader>fru :FzfHistory<CR>
+<leader>fsh :FzfHistory/<CR>
+
+
 ## [Surround]
 
 This plugin is a tool for dealing with pairs of "surroundings."  Examples
@@ -411,6 +421,7 @@ Here's some tips if you've never used VIM before:
 [NERDCommenter]:https://github.com/scrooloose/nerdcommenter
 [Undotree]:https://github.com/mbbill/undotree
 [NERDTree]:https://github.com/scrooloose/nerdtree
+[Fzf] :https://github.com/junegunn/fzf.vim
 [solarized]:https://github.com/altercation/vim-colors-solarized
 [neocomplete]:https://github.com/shougo/neocomplete
 [Fugitive]:https://github.com/tpope/vim-fugitive
