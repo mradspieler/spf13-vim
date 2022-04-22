@@ -258,9 +258,25 @@ filetype. View `help :NERDCommenter` or checkout my post on [NERDCommenter](http
 
 **QuickStart** Toggle comments using `<Leader>c<space>` in Visual or Normal mode.
 
-## [coc-snippets]
-
 ## [Coc]
+Coc.nvim is a VIM intelligent completion plug-in for vim8 and neovim based on nodejs.
+It has LSP support. The overall style of configuration, usage and plug-in system is similar to vscode.
+
+For myself, the reason for choosing it is that it is easy to install and has enough functions. Compared with youcompleteme, deoplete, etc... the installation process is simply too comfortable.
+
+### [coc-snippets]
+Snippets solution for coc.nvim.
+
+It's capable of:
+* Load UltiSnips snippets.
+* Load snipmate snippets.
+* Load VSCode snippets from coc extensions.
+* Load VSCode snippets from custom directories.
+* Load UltiSnips snippets from configured folder.
+* Provide snippets as completion items.
+* Provide expand and expandOrJump keymaps for snippet.
+* Provide snippets list for edit snippet.
+* Provide snippets.editSnippets command for edit user snippets of current filety
 
 ## [ALE]
 
@@ -426,6 +442,8 @@ Here's some tips if you've never used VIM before:
 [Undotree]:https://github.com/mbbill/undotree
 [NERDTree]:https://github.com/scrooloose/nerdtree
 [Fzf] :https://github.com/junegunn/fzf.vim
+[Coc] :https://github.com/neoclide/coc.nvim
+[coc-snippets] :https://github.com/neoclide/coc-snippets
 [solarized]:https://github.com/altercation/vim-colors-solarized
 [neocomplete]:https://github.com/shougo/neocomplete
 [Fugitive]:https://github.com/tpope/vim-fugitive
