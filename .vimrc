@@ -679,6 +679,8 @@
             nnoremap <silent> <leader>fch :FzfHistory:<CR>
             " Search history
             nnoremap <silent> <leader>fsh :FzfHistory/<CR>
+            " Ripgrep search
+            nnoremap <silent> <leader>rg :FzfRg<CR>
         endif
     "}
 
