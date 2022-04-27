@@ -279,6 +279,12 @@ It's capable of:
 * Provide snippets.editSnippets command for edit user snippets of current filety
 
 ## [ALE]
+ALE (Asynchronous Lint Engine) is a plugin providing linting (syntax checking and semantic errors) in NeoVim 0.2.0+ and Vim 8 while you edit your text files, and acts as a Vim Language Server Protocol client
+
+The easiest way to get coc and ALE to work together is to configure coc.nvim to send diagnostics to ALE, so ALE controls how all problems are presented to you, and to disable all LSP features in ALE, so ALE doesn't try to provide LSP features already provided by coc.nvim, such as auto-completion.
+
+1. Open your coc.nvim configuration file with :CocConfig and add "diagnostic.displayByAle": true to your settings.
+2. Add let g:ale_disable_lsp = 1 to your vimrc file, before plugins are loaded.
 
 ## [AutoClose]
 
@@ -441,6 +447,7 @@ Here's some tips if you've never used VIM before:
 [Fzf]:https://github.com/junegunn/fzf.vim
 [Coc]:https://github.com/neoclide/coc.nvim
 [coc-snippets]:https://github.com/neoclide/coc-snippets
+[ALE]:https://github.com/dense-analysis/ale
 [solarized]:https://github.com/altercation/vim-colors-solarized
 [neocomplete]:https://github.com/shougo/neocomplete
 [Fugitive]:https://github.com/tpope/vim-fugitive
