@@ -9,13 +9,13 @@
 
 spf13-vim is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
 
-It is a good starting point for anyone intending to use VIM for development running equally well on Windows, Linux, \*nix and Mac.
+It is a good starting point for anyone intending to use VIM for development running equally well on Linux, \*nix and Mac.
 
 The distribution is completely customisable using a `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local` Vim RC files.
 
 ![spf13-vim image][spf13-vim-img]
 
-Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, spf13-vim 3 uses the [Plug] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vim-plug also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
+Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, spf13-vim uses the [Plug] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vim-plug also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
 
 Great care has been taken to ensure that each plugin plays nicely with others, and optional configuration has been provided for what we believe is the most efficient use.
 
@@ -26,7 +26,7 @@ It works well on Linux and OSX without any modifications or additional configura
 
 ## Linux, \*nix, Mac OSX Installation
 
-The easiest way to install spf13-vim is to use our [automatic installer](https://j.mp/spf13-vim3) by simply copying and pasting the following line into a terminal. This will install spf13-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
+The easiest way to install spf13-vim is to use our [automatic installer](https://tinyurl.com/2p8x54ve) by simply copying and pasting the following line into a terminal. This will install spf13-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
 
 *Requires Git 1.7+ and Vim 7.3+*
 
@@ -279,6 +279,12 @@ It's capable of:
 * Provide snippets.editSnippets command for edit user snippets of current filety
 
 ## [ALE]
+ALE (Asynchronous Lint Engine) is a plugin providing linting (syntax checking and semantic errors) in NeoVim 0.2.0+ and Vim 8 while you edit your text files, and acts as a Vim Language Server Protocol client
+
+The easiest way to get coc and ALE to work together is to configure coc.nvim to send diagnostics to ALE, so ALE controls how all problems are presented to you, and to disable all LSP features in ALE, so ALE doesn't try to provide LSP features already provided by coc.nvim, such as auto-completion.
+
+1. Open your coc.nvim configuration file with :CocConfig and add "diagnostic.displayByAle": true to your settings.
+2. Add let g:ale_disable_lsp = 1 to your vimrc file, before plugins are loaded.
 
 ## [AutoClose]
 
@@ -397,7 +403,6 @@ Terminal emulator colorschemes:
 
 It also contains a very complete set of [snippets](https://github.com/spf13/snipmate-snippets) for use with snipmate or [neocomplete].
 
-
 # Intro to VIM
 
 Here's some tips if you've never used VIM before:
@@ -441,6 +446,7 @@ Here's some tips if you've never used VIM before:
 [Fzf]:https://github.com/junegunn/fzf.vim
 [Coc]:https://github.com/neoclide/coc.nvim
 [coc-snippets]:https://github.com/neoclide/coc-snippets
+[ALE]:https://github.com/dense-analysis/ale
 [solarized]:https://github.com/altercation/vim-colors-solarized
 [neocomplete]:https://github.com/shougo/neocomplete
 [Fugitive]:https://github.com/tpope/vim-fugitive
