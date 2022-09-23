@@ -264,6 +264,58 @@ It has LSP support. The overall style of configuration, usage and plug-in system
 
 For myself, the reason for choosing it is that it is easy to install and has enough functions. Compared with youcompleteme, deoplete, etc... the installation process is simply too comfortable.
 
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+" Use CTRL-S for selections ranges.
+" Requires 'textDocument/selectionRange' support of language server.
+<C-s> <Plug>(coc-range-select)
+
+" Mappings for CoCList
+" Show all diagnostics.
+ <space>a  :<C-u>CocList diagnostics<cr>
+
+" Manage extensions.
+ <space>e  :<C-u>CocList extensions<cr>
+
+" Show commands.
+<space>c  :<C-u>CocList commands<cr>
+
+" Find symbol of current document.
+<space>o  :<C-u>CocList outline<cr>
+
+" Search workspace symbols.
+<space>s  :<C-u>CocList -I symbols<cr>
+
+" Do default action for next item.
+<space>j  :<C-u>CocNext<CR>
+
+" Do default action for previous item.
+<space>k  :<C-u>CocPrev<CR>
+
+" Resume latest coc list.
+<space>p  :<C-u>CocListResume<CR>
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocActionAsync('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
+
+* :CocInfo
+* :CocOpenLog
+
+Coc-go
+https://github.com/josa42/coc-go
+
 ### [coc-snippets]
 Snippets solution for coc.nvim.
 
@@ -277,6 +329,29 @@ It's capable of:
 * Provide expand and expandOrJump keymaps for snippet.
 * Provide snippets list for edit snippet.
 * Provide snippets.editSnippets command for edit user snippets of current filety
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
+
+* Use :CocList snippets to open snippets list used by current buffer.
+* Use :CocCommand snippets.openSnippetFiles to choose and open a snippet file that used by current document.
+* Use :CocCommand snippets.editSnippets to edit user's ultisnips snippets of current document filetype.
+* Use :CocCommand snippets.openOutput to open output channel of snippets.
 
 ## [ALE]
 ALE (Asynchronous Lint Engine) is a plugin providing linting (syntax checking and semantic errors) in NeoVim 0.2.0+ and Vim 8 while you edit your text files, and acts as a Vim Language Server Protocol client
