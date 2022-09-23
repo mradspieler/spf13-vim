@@ -263,7 +263,7 @@ Coc.nvim is a VIM intelligent completion plug-in for vim8 and neovim based on no
 It has LSP support. The overall style of configuration, usage and plug-in system is similar to vscode.
 
 For myself, the reason for choosing it is that it is easy to install and has enough functions. Compared with youcompleteme, deoplete, etc... the installation process is simply too comfortable.
-
+```
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -315,6 +315,7 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 
 Coc-go
 https://github.com/josa42/coc-go
+```
 
 ### [coc-snippets]
 Snippets solution for coc.nvim.
@@ -330,6 +331,7 @@ It's capable of:
 * Provide snippets list for edit snippet.
 * Provide snippets.editSnippets command for edit user snippets of current filety
 
+```
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
 
@@ -352,6 +354,7 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 * Use :CocCommand snippets.openSnippetFiles to choose and open a snippet file that used by current document.
 * Use :CocCommand snippets.editSnippets to edit user's ultisnips snippets of current document filetype.
 * Use :CocCommand snippets.openOutput to open output channel of snippets.
+```
 
 ## [ALE]
 ALE (Asynchronous Lint Engine) is a plugin providing linting (syntax checking and semantic errors) in NeoVim 0.2.0+ and Vim 8 while you edit your text files, and acts as a Vim Language Server Protocol client
